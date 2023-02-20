@@ -1,0 +1,1 @@
+$(".btnSub").click(function () {})
