@@ -40,58 +40,46 @@ if (empty($_SESSION["userLogin"])) {
                     <h3>แบบวัดอารมณ์โดยรวม</h3>
                     <hr>
                 </div>
-                <?php
-                include 'config/connect.php';
-                $stmt = $coon->prepare(" SELECT* FROM qt_1 ");
-                $stmt->execute();
-                $nn = 1;
 
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
-                ?>
-
-                    <div class="mainQ">
-                        <div class="headTitle">
-                            <h6><?= $row["qt_title"] ?></h6>
+                <div class="mainQ">
+                    <div class="headTitle">
+                        <h6><?= $row["qt_title"] ?></h6>
+                    </div>
+                    <div class="subQ">
+                        <div class="form-check mm1">
+                            <input class="form-check-input mood<?= $row["qt_id"] ?>" type="radio" name="mood<?= $row["qt_id"] ?>" id="flexRadioDefault<?= $nn ?>-1" value="1">
+                            <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-1">
+                                1. ไม่เลย ไม่รู้สึก
+                            </label>
                         </div>
-                        <div class="subQ">
-                            <div class="form-check mm1">
-                                <input class="form-check-input mood<?= $row["qt_id"] ?>" type="radio" name="mood<?= $row["qt_id"] ?>" id="flexRadioDefault<?= $nn ?>-1" value="1">
-                                <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-1">
-                                    1. ไม่เลย ไม่รู้สึก
-                                </label>
-                            </div>
-                            <div class="form-check mm1">
-                                <input class="form-check-input mood<?= $row["qt_id"] ?>" type="radio" name="mood<?= $row["qt_id"] ?>" id="flexRadioDefault<?= $nn ?>-2" value="2">
-                                <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-2">
-                                    2. รู้สึก
-                                </label>
-                            </div>
-                            <div class="form-check mm1">
-                                <input class="form-check-input mood<?= $row["qt_id"] ?>" type="radio" name="mood<?= $row["qt_id"] ?>" id="flexRadioDefault<?= $nn ?>-3" value="3">
-                                <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-3">
-                                    3. รู้สึกปานกลาง
-                                </label>
-                            </div>
-                            <div class="form-check mm1">
-                                <input class="form-check-input mood<?= $row["qt_id"] ?>" type="radio" name="mood<?= $row["qt_id"] ?>" id="flexRadioDefault<?= $nn ?>-4" value="4">
-                                <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-4">
-                                    4. รู้สึกมาก
-                                </label>
-                            </div>
-                            <div class="form-check mm1">
-                                <input class="form-check-input mood<?= $row["qt_id"] ?>" type="radio" name="mood<?= $row["qt_id"] ?>" id="flexRadioDefault<?= $nn ?>-5" value="5">
-                                <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-5">
-                                    5. รู้สึกมากที่สุด
-                                </label>
-                            </div>
+                        <div class="form-check mm1">
+                            <input class="form-check-input mood<?= $row["qt_id"] ?>" type="radio" name="mood<?= $row["qt_id"] ?>" id="flexRadioDefault<?= $nn ?>-2" value="2">
+                            <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-2">
+                                2. รู้สึก
+                            </label>
+                        </div>
+                        <div class="form-check mm1">
+                            <input class="form-check-input mood<?= $row["qt_id"] ?>" type="radio" name="mood<?= $row["qt_id"] ?>" id="flexRadioDefault<?= $nn ?>-3" value="3">
+                            <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-3">
+                                3. รู้สึกปานกลาง
+                            </label>
+                        </div>
+                        <div class="form-check mm1">
+                            <input class="form-check-input mood<?= $row["qt_id"] ?>" type="radio" name="mood<?= $row["qt_id"] ?>" id="flexRadioDefault<?= $nn ?>-4" value="4">
+                            <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-4">
+                                4. รู้สึกมาก
+                            </label>
+                        </div>
+                        <div class="form-check mm1">
+                            <input class="form-check-input mood<?= $row["qt_id"] ?>" type="radio" name="mood<?= $row["qt_id"] ?>" id="flexRadioDefault<?= $nn ?>-5" value="5">
+                            <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-5">
+                                5. รู้สึกมากที่สุด
+                            </label>
                         </div>
                     </div>
+                </div>
 
-                <?php
-                    $nn++;
-                }
-                ?>
 
                 <div class="d-grid gap-2">
                     <button type="submit" class="btn btn-primary btnSub">บันทกข้อมูล</button>
