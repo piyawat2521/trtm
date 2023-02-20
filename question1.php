@@ -94,20 +94,7 @@ if (empty($_SESSION["userLogin"])) {
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-
-            $(".btnSub").click(function() {
-                for (let i = 1; i <= 20; i++) {
-                    if ($(".mood" + i + ":checked").length == "") {
-                        $(".mood" + i).focus();
-                        alert("กรุณาตอบคำถามข้อที่ " + i + " ด้วย !!");
-                        return false
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="js/q1.js"></script>
 
 
 </body>
