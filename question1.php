@@ -34,7 +34,9 @@ if (empty($_SESSION["userLogin"])) {
 
 
         <div class="container" style="margin-top: 10rem;">
-            <div class="showId">Id : <span><?= $_SESSION["idCode"] ?></span></div>
+            <div class="showId">Id : <span>
+                    <?= $_SESSION["idCode"] ?>
+                </span></div>
             <div class="col-md-12">
                 <div class="headQ">
                     <h3>แบบวัดอารมณ์โดยรวม</h3>
@@ -48,31 +50,35 @@ if (empty($_SESSION["userLogin"])) {
                     </div>
                     <div class="subQ">
                         <div class="form-check">
-                            <input class="form-check-input q1" type="radio" name="q1" id="flexRadioDefaultq1" value="-1">
-                            <label class="form-check-label" for="flexRadioDefaultq1">
+                            <input class="form-check-input q1" type="radio" name="q1" id="q1" value="-1">
+                            <label class="form-check-label" for="q1">
                                 1. ไม่เลย ไม่รู้สึก
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input q1" type="radio" name="q1" id="flexRadioDefaultq1" value="-2">
+                            <input class="form-check-input q1" type="radio" name="q1" id="flexRadioDefaultq1"
+                                value="-2">
                             <label class="form-check-label" for="flexRadioDefaultq1">
                                 2. รู้สึก
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input q1" type="radio" name="q1" id="flexRadioDefaultq1" value="-3">
+                            <input class="form-check-input q1" type="radio" name="q1" id="flexRadioDefaultq1"
+                                value="-3">
                             <label class="form-check-label" for="flexRadioDefaultq1">
                                 3. รู้สึกปานกลาง
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input q1" type="radio" name="q1" id="flexRadioDefaultq1" value="-4">
+                            <input class="form-check-input q1" type="radio" name="q1" id="flexRadioDefaultq1"
+                                value="-4">
                             <label class="form-check-label" for="flexRadioDefaultq1">
                                 4. รู้สึกมาก
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input q1" type="radio" name="q1" id="flexRadioDefaultq1" value="-5">
+                            <input class="form-check-input q1" type="radio" name="q1" id="flexRadioDefaultq1"
+                                value="-5">
                             <label class="form-check-label" for="flexRadioDefaultq1">
                                 5. รู้สึกมากที่สุด
                             </label>
