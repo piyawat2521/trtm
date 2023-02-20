@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;500&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.iconBkText p {
+  font-size: 18px;
+}
+
+.detailCenter {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 30vh !important;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.textDetail {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: #0e0164;
+  font-family: "Prompt", sans-serif;
+}
+
+.detailImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: -5rem;
+}
+
+.detailImg img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.btnClick {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.btnLink {
+  display: block;
+  border: 2pt #050146 solid;
+  font-family: "Prompt", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: #050146;
+  border-radius: 1rem;
+  font-weight: 500;
+  z-index: 999;
+}
+
+.btnLink:hover {
+  display: block;
+  border: 2pt #cac7f9 solid;
+  font-family: "Prompt", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: #050146;
+  border-radius: 1rem;
+  font-weight: 500;
+  z-index: 999;
+}
+
+.detailCenterList {
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  .detailCenter {
+    display: none;
+  }
+  .detailCenterList {
+    display: block;
+    margin-top: 15vh;
+  }
+  .textDetail {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #0e0164;
+    font-family: "Prompt", sans-serif;
+  }
+  .detailImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+  .detailImg img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .btnClick {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .btnLink {
+    display: block;
+    border: 2pt #ffffff solid;
+    font-family: "Prompt", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem;
+    color: #ffffff;
+    border-radius: 1rem;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .btnLink:hover {
+    display: block;
+    border: 2pt #ffffff solid;
+    font-family: "Prompt", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem;
+    color: #ffffff;
+    border-radius: 1rem;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .topIcon {
+    position: relative;
+    left: -2rem;
+  }
+  .iconBk img {
+    width: 350px;
+    height: auto;
+  }
+  .iconBkText {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 3rem;
+    left: 3rem;
+    font-family: "Prompt", sans-serif;
+    color: #ffffff;
+    text-align: right;
+  }
+}
+
+.footerBk {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 4rem 0rem;
+  background-color: rgb(2, 2, 57);
+  color: #ffffff;
+  text-align: center;
+  margin-top: 3rem;
+  font-family: "Prompt", sans-serif;
+  font-size: 14px;
+}
+
+.btnSub {
+  font-family: "Prompt", sans-serif;
+}
+
+.showId {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.showId span {
+  color: rgb(94, 94, 94);
+}
+
+.fromReg {
+  font-family: "Prompt", sans-serif;
+}
+
+.fromReg .h5 {
+  text-align: right;
+}
+
+.reImg {
+  display: block;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: -5rem;
+}
+
+.reImg img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}

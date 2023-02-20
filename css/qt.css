@@ -1,0 +1,94 @@
+.headQ {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: rgb(40, 40, 40);
+    font-family: "Prompt", sans-serif;
+}
+
+.mainQ {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 2rem 3rem;
+    border-radius: 1pt;
+    border-radius: 1rem;
+    background-color: #f0f0f0;
+    margin-bottom: 0.8rem;
+}
+
+.headTitle h6 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Prompt", sans-serif;
+    color: rgb(40, 40, 40);
+    margin-bottom: 1.5rem;
+    line-height: 40px;
+    color: rgb(0, 0, 101);
+}
+
+.subQ {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: "Prompt", sans-serif;
+    color: rgb(55, 55, 55);
+    margin-left: 1.5rem;
+}
+
+.mm1 {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.titleAlert {
+    color: red;
+    font-family: "Prompt", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.showMainBk {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.showText {
+    font-family: "Prompt", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.showNumSum {
+    font-family: "Prompt", sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+.showImg {
+    display: block;
+    width: 25%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+}
+
+.showImg img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.showDetail {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border: 1pt solid #ffeabd;
+    background-color: #ffeabd;
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+}
