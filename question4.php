@@ -25,6 +25,9 @@ session_start();
 
         <div class="container" style="margin-top: 10rem;">
             <div class="col-md-12">
+                <div class="showId">Id : <span>
+                        <?= $_SESSION["idCode"] ?>
+                    </span></div>
                 <div class="headQ">
                     <h3>แบบประเมินความเสี่ยงฆ่าตัวตาย</h3>
                     <hr>
@@ -46,6 +49,36 @@ session_start();
                         $chText2 = "มี";
                     }
 
+
+                    if ($row["qt4_id"] == 1) {
+                        $valNum = 1;
+                    }
+                    if ($row["qt4_id"] == 2) {
+                        $valNum = 2;
+                    }
+                    if ($row["qt4_id"] == 3) {
+                        $valNum = 6;
+                    }
+                    if ($row["qt4_id"] == 4) {
+                        $valNum = 8;
+                    }
+                    if ($row["qt4_id"] == 5) {
+                        $valNum = 8;
+                    }
+                    if ($row["qt4_id"] == 6) {
+                        $valNum = 9;
+                    }
+                    if ($row["qt4_id"] == 7) {
+                        $valNum = 4;
+                    }
+                    if ($row["qt4_id"] == 8) {
+                        $valNum = 10;
+                    }
+                    if ($row["qt4_id"] == 9) {
+                        $valNum = 4;
+                    }
+
+
                 ?>
 
                     <div class="mainQ Head<?= $row["qt4_num"] ?> " id="">
@@ -53,7 +86,6 @@ session_start();
                             <h6><?= $row["qt4_title"] ?></h6>
                         </div>
                         <div class="subQ">
-
                             <div class="form-check mm1">
                                 <input class="form-check-input kill<?= $row["qt4_id"] ?>" type="radio" name="kill<?= $row["qt4_id"] ?>" id="qtShow<?= $nn ?>-1" value="0">
                                 <label class="form-check-label" for="qtShow<?= $nn ?>-1">
@@ -61,7 +93,7 @@ session_start();
                                 </label>
                             </div>
                             <div class="form-check mm1">
-                                <input class="form-check-input kill<?= $row["qt4_id"] ?>" type="radio" name="kill<?= $row["qt4_id"] ?>" id="qtShow<?= $nn ?>-2" value="1">
+                                <input class="form-check-input kill<?= $row["qt4_id"] ?>" type="radio" name="kill<?= $row["qt4_id"] ?>" id="qtShow<?= $nn ?>-2" value="<?= $valNum ?>">
                                 <label class="form-check-label" for="qtShow<?= $nn ?>-2">
                                     2. <?= $chText2 ?>
                                 </label>
@@ -106,7 +138,7 @@ session_start();
 
     </form>
 
-    <?php include 'title-footer/footer.php'; ?>
+    <?php include 'title-footer/footerNo.php'; ?>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

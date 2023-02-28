@@ -25,6 +25,9 @@ session_start();
 
         <div class="container" style="margin-top: 10rem;">
             <div class="col-md-12">
+                <div class="showId">Id : <span>
+                        <?= $_SESSION["idCode"] ?>
+                    </span></div>
                 <div class="headQ">
                     <h3>แบบประเมินโรคซึมเศร้า</h3>
                     <hr>
@@ -98,7 +101,7 @@ session_start();
 
     </form>
 
-    <?php include 'title-footer/footer.php'; ?>
+    <?php include 'title-footer/footerNo.php'; ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>

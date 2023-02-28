@@ -2,10 +2,10 @@
 session_start();
 $n = 9;
 for ($i = 0; $i <= $n; $i++) {
-    //$q3 .= $_POST["drear$i"];
-    echo $i . ":" . $_POST["drear$i"] . "<br>";
+    $qt3 += $_POST["drear$i"];
+    //echo $i . ":" . $_POST["drear$i"] . "<br>";
 }
-$_SESSION["q3"] = $q3;
+$_SESSION["qt3"] = $qt3;
 ?>
 
 <!DOCTYPE html>
@@ -24,22 +24,37 @@ $_SESSION["q3"] = $q3;
 </head>
 
 <body>
-    <?php include('../banner/banner.php'); ?>
+    <?php include('banner/banner.php'); ?>
+
+
+
+    <?php
+    if ($qt3 >= 0 and $qt3 < 7) {
+        $text = "ไม่มีอาการของโรคซึมเศร้า หรือมีอาการของโรคซึมเศร้าระดับน้อยมาก <br><h5>ข้อแนะนำ</h5> ฝึกผ่อนคลายความเครียด และคิดบวกเพื่อลดอาการซีมเศร้า ตามคำแนะนำบน app ได้ด้วยตนเอง หรือสามารถปรึกษานักจิตวิทยา หรือแพทย์ทั่วไปเพิ่มเติม ";
+        $imgShow = '<img src="image/icon-1.png" alt="" srcset="">';
+    } elseif ($qt3 >= 7 and $qt3 <= 12) {
+        $text = "มีอาการของโรคซึมเศร้า ระดับน้อย <br><h5>ข้อแนะนำ</h5> สามารถทำแบบประเมินความเสี่ยงฆ่าตัวตายต่อได้ และควรเริ่มปรึกษานักจิตวิทยา แพทย์ทั่วไป";
+        $imgShow = '<img src="image/icon-2.png" alt="" srcset="">';
+    } elseif ($qt3 >= 13 and $qt3 <= 18) {
+        $text = "มีอาการของโรคซึมเศร้า ระดับปานกลาง <br><h5>ข้อแนะนำ</h5> ทำแบบประเมินความเสี่ยงฆ่าตัวตาย แจ้งญาติ เฝ้าระวังการฆ่าตัวตาย เช่น เก็บอาวุธ ไม่ปล่อยให้อยู่คนเดียว และต้องปรึกษาจิตแพทย์";
+        $imgShow = '<img src="image/icon-3.png" alt="" srcset="">';
+    } elseif ($qt3 > 19) {
+        $text = "มีอาการของโรคซึมเศร้า ระดับรุนแรง <br><h5>ข้อแนะนำ</h5> แจ้งญาติ เฝ้าระวังการฆ่าตัวตาย เช่น เก็บอาวุธ ไม่ปล่อยให้อยู่คนเดียว ปรึกษาจิตแพทย์ และ/หรือส่งต่อโรงพยาบาล";
+        $imgShow = '<img src="image/icon-4.png" alt="" srcset="">';
+    }
+
+    ?>
 
 
     <div class="container" style="margin-top: 13rem;">
         <div class="col-md-4"></div>
         <div class="col-md-4 showMainBk">
             <div class="showText">ผลการประเมินแบบวัดอารมณ์โดยรวม</div>
-            <div class="showImg"><img src="image/icon-1.png" alt="" srcset=""></div>
+            <div class="showImg"><?= $imgShow ?></div>
             <div class="showNumSum"><?= $qt3 ?></div>
             <div class="showDetail">
                 <h5>คำอธิบาย</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus debitis consectetur quos incidunt
-                    voluptatibus tempora in labore odio totam ducimus beatae explicabo dignissimos atque veritatis
-                    doloremque rem, neque laborum quod. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Commodi maiores architecto repudiandae corrupti deserunt corporis harum voluptatum id officia quas
-                    quo est libero, numquam ducimus distinctio aliquam omnis. Consequatur, praesentium.</p>
+                <p><?= $text ?></p>
             </div>
             <hr>
             <div class="btnNo">
@@ -50,6 +65,8 @@ $_SESSION["q3"] = $q3;
         </div>
         <div class="col-md-4"></div>
     </div>
+
+    <?php include 'title-footer/footer.php'; ?>
 
 </body>
 

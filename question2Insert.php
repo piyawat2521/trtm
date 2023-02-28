@@ -2,8 +2,8 @@
 session_start();
 $n = 5;
 for ($i = 0; $i <= $n; $i++) {
-    // $qt2 .= $_POST["st$i"];
-    echo $i . ":" . $_POST["st$i"] . "<br>";
+    $qt2 += $_POST["st$i"];
+    //echo $i . ":" . $_POST["st$i"] . "<br>";
 }
 
 $_SESSION["qt2"] = $qt2;
@@ -25,22 +25,35 @@ $_SESSION["qt2"] = $qt2;
 </head>
 
 <body>
-    <?php include('../banner/banner.php'); ?>
+    <?php include('banner/banner.php'); ?>
+
+    <?php
+    if ($qt2 >= 0 and $qt2 <= 4) {
+        $text = "ความเครียดน้อย <br><h5>ข้อแนะนำ</h5> ฝึกคิดบวก ";
+        $imgShow = '<img src="image/icon-1.png" alt="" srcset="">';
+    } elseif ($qt2 >= 5 and $qt2 <= 7) {
+        $text = "ความเครียดปานกลาง <br><h5>ข้อแนะนำ</h5> ฝึกผ่อนคลายความเครียด และคิดบวก ตามคำแนะนำบน app ได้ด้วยตนเองและสามารถปรึกษานักจิตวิทยา หรือแพทย์ทั่วไปเพิ่มเติม";
+        $imgShow = '<img src="image/icon-2.png" alt="" srcset="">';
+    } elseif ($qt2 >= 8 and $qt2 <= 9) {
+        $text = "ความเครียดมาก <br><h5>ข้อแนะนำ</h5> มีความเครียดมาก ถึงมากที่สุด ให้ทำแบบทดสอบ Depression";
+        $imgShow = '<img src="image/icon-3.png" alt="" srcset="">';
+    } elseif ($qt2 >= 10 and $qt2 <= 15) {
+        $text = "ความเครียดมากที่สุด <br><h5>ข้อแนะนำ</h5> มีความเครียดมาก ถึงมากที่สุด ให้ทำแบบทดสอบ Depression";
+        $imgShow = '<img src="image/icon-4.png" alt="" srcset="">';
+    }
+
+    ?>
 
 
-    <div class="container" style="margin-top: 13rem;">
+    <div class="container" style="margin-top: 13rem; position: relative; min-height: 100vh;">
         <div class="col-md-4"></div>
         <div class="col-md-4 showMainBk">
             <div class="showText">ผลการประเมินแบบวัดอารมณ์โดยรวม</div>
-            <div class="showImg"><img src="image/icon-1.png" alt="" srcset=""></div>
+            <div class="showImg"><?= $imgShow ?></div>
             <div class="showNumSum"><?= $qt2 ?></div>
             <div class="showDetail">
                 <h5>คำอธิบาย</h5>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus debitis consectetur quos incidunt
-                    voluptatibus tempora in labore odio totam ducimus beatae explicabo dignissimos atque veritatis
-                    doloremque rem, neque laborum quod. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Commodi maiores architecto repudiandae corrupti deserunt corporis harum voluptatum id officia quas
-                    quo est libero, numquam ducimus distinctio aliquam omnis. Consequatur, praesentium.</p>
+                <p><?= $text ?></p>
             </div>
             <hr>
             <div class="btnNo">
@@ -51,6 +64,8 @@ $_SESSION["qt2"] = $qt2;
         </div>
         <div class="col-md-4"></div>
     </div>
+
+    <?php include 'title-footer/footer.php'; ?>
 
 </body>
 

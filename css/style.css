@@ -161,7 +161,26 @@
   display: block;
   width: 100%;
   height: auto;
-  padding: 4rem 0rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  background-color: rgb(2, 2, 57);
+  color: #ffffff;
+  text-align: center;
+  margin-top: 3rem;
+  font-family: "Prompt", sans-serif;
+  font-size: 14px;
+
+  position: fixed;
+  bottom: 0;
+  height: 2.5rem;
+}
+
+.footerBkNo {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
   background-color: rgb(2, 2, 57);
   color: #ffffff;
   text-align: center;
@@ -209,4 +228,37 @@
   width: 100%;
   height: auto;
   margin: auto;
+}
+
+.textSum {
+  font-family: "Prompt", sans-serif;
+  text-align: center;
+}
+
+.boxMainUl {
+  list-style: none;
+}
+
+.boxMainUl li {
+  display: block;
+  height: auto;
+  padding: 1rem 0.2rem;
+  margin-bottom: -1rem;
+  margin-top: 2rem;
+  margin-left: -1rem;
+}
+
+.boxMainUl li span {
+  font-size: 20px;
+  display: block;
+  background-color: rgb(223, 198, 2);
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: auto;
+}
+
+.tabalFont {
+  font-family: "Prompt", sans-serif;
 }

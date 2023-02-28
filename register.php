@@ -17,16 +17,13 @@ session_start();
 </head>
 
 <body>
-    <div class="container-fluid topIcon">
-        <div class="iconBk">
-            <div class="iconBkText">
-                <h3>Mind TRTM </h3>
-            </div>
-            <img src="image/cross_top.png" alt="" srcset="">
-        </div>
-    </div>
+    <?php include('banner/banner.php'); ?>
 
-    <div class="container" style="margin-top: 2rem;">
+
+    <div class="container" style="margin-top: 20vh;">
+        <div class="showId">Id : <span>
+                <?= $_SESSION["idCode"] ?>
+            </span></div>
         <div class="col-md-4"></div>
         <div class="col-md-4 showMainBk">
             <div class="fromReg">
@@ -60,6 +57,8 @@ session_start();
         </div>
         <div class="col-md-4"></div>
     </div>
+
+    <?php include 'title-footer/footerNo.php'; ?>
 
 </body>
 

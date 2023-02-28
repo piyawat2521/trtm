@@ -23,6 +23,9 @@ session_start();
     <form method="POST" action="question2Insert.php">
 
         <div class="container" style="margin-top: 10rem;">
+            <div class="showId">Id : <span>
+                    <?= $_SESSION["idCode"] ?>
+                </span></div>
             <div class="col-md-12">
                 <div class="headQ">
                     <h3>แบบประเมินความเครียด</h3>
@@ -46,26 +49,26 @@ session_start();
                             <div class="form-check mm1">
                                 <input class="form-check-input st<?= $row["qt2_id"] ?>" type="radio" name="st<?= $row["qt2_id"] ?>" id="flexRadioDefault<?= $nn ?>-1" value="0">
                                 <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-1">
-                                    1. เป็นน้อยมากหรือแทบไม่มี *st<?= $row["qt2_id"] ?>
+                                    1. เป็นน้อยมากหรือแทบไม่มี
                                 </label>
                             </div>
                             <div class="form-check mm1">
                                 <input class="form-check-input st<?= $row["qt2_id"] ?>" type="radio" name="st<?= $row["qt2_id"] ?>" id="flexRadioDefault<?= $nn ?>-2" value="1">
                                 <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-2">
-                                    2. เป็นบางครั้ง *st<?= $row["qt2_id"] ?>
+                                    2. เป็นบางครั้ง
                                 </label>
                             </div>
                             <div class="form-check mm1">
                                 <input class="form-check-input st<?= $row["qt2_id"] ?>" type="radio" name="st<?= $row["qt2_id"] ?>" id="flexRadioDefault<?= $nn ?>-3" value="2">
                                 <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-3">
-                                    3. เป็นบ่อยครั้ง *st<?= $row["qt2_id"] ?>
+                                    3. เป็นบ่อยครั้ง
                                 </label>
                             </div>
 
                             <div class="form-check mm1">
                                 <input class="form-check-input st<?= $row["qt2_id"] ?>" type="radio" name="st<?= $row["qt2_id"] ?>" id="flexRadioDefault<?= $nn ?>-4" value="3">
                                 <label class="form-check-label" for="flexRadioDefault<?= $nn ?>-4">
-                                    4. เป็นประจำ *st<?= $row["qt2_id"] ?>
+                                    4. เป็นประจำ
                                 </label>
                             </div>
                             <!--
@@ -93,7 +96,7 @@ session_start();
 
     </form>
 
-    <?php include 'title-footer/footer.php'; ?>
+    <?php include 'title-footer/footerNo.php'; ?>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,16 +24,18 @@ session_start();
     <div class="container" style="margin-top: 10rem">
         <div class="col-md-12">
             <div class="textSum">
-                <h1>สรุปผมการประเมิน</h1>
-                <ul>
-                    <li>$q1 = <?= $_SESSION["qt1"] ?></li>
-                    <li>$q2 = <?= $_SESSION["qt2"] ?></li>
-                    <li>$q3 = <?= $_SESSION["qt3"] ?></li>
-                    <li>$q4 = <?= $_SESSION["qt4"] ?></li>
+                <h3>สรุปผลการประเมิน</h3>
+                <ul class="boxMainUl">
+                    <li>แบบวัดอารมณ์โดยรวม <br><br> <span><?= $_SESSION["qt1"] ?></span></li>
+                    <li>แบบประเมินความเครียด <br><br> <span><?= $_SESSION["qt2"] ?></span></li>
+                    <li>แบบประเมินโรคซึมเศร้า <br><br> <span><?= $_SESSION["qt3"] ?></span></li>
+                    <li>แบบประเมินความเสี่ยงฆ่าตัวตาย <br><br> <span><?= $_SESSION["qt4"] ?></span></li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <?php include 'title-footer/footer.php'; ?>
 
 </body>
 
